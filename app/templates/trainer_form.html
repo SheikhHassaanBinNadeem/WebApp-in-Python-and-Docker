@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Form</title>
+</head>
+<body>
+    <table>
+        <form method="post" action="{{ url_for('submission_successful') }}" name="trainer_details_form">
+            <h1>Trainer Form</h1> <h4>Welcome {{username}}! Please enter your details.</h4>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td>Designation</td>
+                <td><input type="text" name="design"></td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td><input type="text" name="course"></td>
+            </tr>
+            <tr>
+                <!-- <td>First Name</td> -->
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </form>
+    </table>
+    <div style="text-align: left;">
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
